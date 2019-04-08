@@ -1,0 +1,48 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag and Drop Blocks</title>   
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="container-fluid vh-100">
+        <div class="vl"></div>
+        <h1 id="box-headline">Boxes</h1>
+        
+    <div class="row ">
+            <div class="v2"></div>
+
+        <div id="box-container" class="col-md-3 vh-100">
+            <div id="1" class="boxes" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" > 1</div> 
+            <div id="2" class="boxes" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" > 2</div>
+            <div id="3" class="boxes" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" > 3</div>
+            <div id="4" class="boxes" ondragstart="dragStart(event)" ondrag="dragging(event)" draggable="true" > 4</div>
+        </div>
+        
+        <div class="col-md-6 vh-100 w-100">
+            <h1 id="drop-headline">Drop the boxes here</h1>   
+            <div id="drop_here" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+                <div id="line1"></div>
+                <div id="line2"></div>
+                <div id="line3"></div>
+            <button id="button" type="button" class="btn btn-primary" onclick="getData()">Submit</button>
+        
+        </div>   
+
+        <div  class="col-md-3">
+        <div id="result"><h2>Sequence of the boxes is: </h2><h3 id="put_sequence"></h3></div>
+        </div>
+    </div>
+</div>
+    
+
+
+    <!-----------Script-->
+    <script src="./js/drag.js"></script>
+</body>
+</html>
